@@ -1,6 +1,6 @@
 name: emulator_checker
 description: A plugin to check if app is running at an Emulator or not.
-version: 1.0.0
+version: 0.0.1
 homepage: https://github.com/rhylvin2022/emulator_checker
 # repository: https://github.com/rhylvin2022/emulator_checker
 
