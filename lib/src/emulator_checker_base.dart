@@ -19,28 +19,28 @@ class EmulatorChecker {
       bool androidEmulator = false;
 
       /// Checking for known android emulator properties
-      if ((androidInfo.fingerprint.contains("generic")) ||
-          (androidInfo.model.contains("Emulator")) ||
-          (androidInfo.manufacturer.contains("Genymotion")) ||
-          (androidInfo.hardware.contains("goldfish")) ||
-          (androidInfo.brand.contains("generic")) ||
-          (androidInfo.product.contains("google_sdk")) ||
-          (androidInfo.product.contains("simulator")) ||
-          (androidInfo.fingerprint.contains("unknown")) ||
-          (androidInfo.hardware.contains("ranchu")) ||
-          (androidInfo.model.contains("Android SDK built for x86")) ||
-          (androidInfo.product.contains("sdk_google")) ||
-          (androidInfo.product.contains("sdk")) ||
-          (androidInfo.product.contains("sdk_x86")) ||
-          (androidInfo.product.contains("sdk_gphone64_arm64")) ||
-          (androidInfo.product.contains("vbox86p")) ||
-          (androidInfo.product.contains("emulator"))) {
+      if ((androidInfo.fingerprint?.contains("generic") ?? false) ||
+          (androidInfo.model?.contains("Emulator") ?? false) ||
+          (androidInfo.manufacturer?.contains("Genymotion") ?? false) ||
+          (androidInfo.hardware?.contains("goldfish") ?? false) ||
+          (androidInfo.brand?.contains("generic") ?? false) ||
+          (androidInfo.product?.contains("google_sdk") ?? false) ||
+          (androidInfo.product?.contains("simulator") ?? false) ||
+          (androidInfo.fingerprint?.contains("unknown") ?? false) ||
+          (androidInfo.hardware?.contains("ranchu") ?? false) ||
+          (androidInfo.model?.contains("Android SDK built for x86") ?? false) ||
+          (androidInfo.product?.contains("sdk_google") ?? false) ||
+          (androidInfo.product?.contains("sdk") ?? false) ||
+          (androidInfo.product?.contains("sdk_x86") ?? false) ||
+          (androidInfo.product?.contains("sdk_gphone64_arm64") ?? false) ||
+          (androidInfo.product?.contains("vbox86p") ?? false) ||
+          (androidInfo.product?.contains("emulator") ?? false)) {
         androidEmulator = true;
       }
 
       ///check if actual Physical Device
       if (!androidEmulator) {
-        androidEmulator = !(androidInfo.isPhysicalDevice);
+        androidEmulator = !(androidInfo.isPhysicalDevice ?? true);
       }
 
       ///check for radio version
