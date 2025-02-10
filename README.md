@@ -1,21 +1,50 @@
+# 📱 Emulator Checker
 
-Developed by: Rhylvin Dale Tinador from Hitachi DPS
-A plugin to check if app is running at an Emulator or not.
+A **Flutter plugin** that detects whether an app is running on an **emulator** or a **real device**. This can be useful for **security measures**, **analytics**, and **feature flagging**, allowing developers to modify app behavior based on the runtime environment.
 
-## Features
+## 🛠 Installation
 
-get the radioVersion
+Add this to your `pubspec.yaml`:
 
-## Getting started
+```yaml
+dependencies:
+  emulator_checker: latest_version
+```
 
-add package to your application in pubspec
+Run:
+```sh
+flutter pub get
+```
 
-## Usage
+## 🚀 Usage
 
-print('EmulatorChecker: ${EmulatorChecker().isEmulator()}');
-///true if app is currently in Emulator
-///false if currently in an actual device
+Import the package:
 
-## Additional information
+```dart
+import 'package:emulator_checker/emulator_checker.dart';
+```
 
-Plugin from HitachiDPS
+### Example: Detect if Running on an Emulator
+
+```dart
+void checkDevice() async {
+  bool isEmulator = await EmulatorChecker().isEmulator();
+  print(isEmulator ? "Running on an emulator" : "Running on a real device");
+}
+```
+
+## 📌 Features
+✅ Detects if the app is running on an **emulator**  
+✅ Supports **Android** and **iOS**  
+✅ Lightweight and easy to use
+
+## 💡 Why Use Emulator Detection?
+- **Security**: Prevent unauthorized access by blocking emulators.
+- **Analytics**: Exclude emulator-based test data from analytics reports.
+- **Feature Control**: Restrict certain app features for real devices only.
+
+## ❤️ Support My Work
+
+If you find this package useful, you can **[buy me a coffee](https://buymeacoffee.com/rhylvin)** to support development!
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-orange?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/rhylvin)  

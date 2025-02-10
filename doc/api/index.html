@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.1.5">
+  <meta name="description" content="emulator_checker API docs, for the Dart programming language.">
+  <title>emulator_checker - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/rhylvin2022/emulator_checker">emulator_checker package</a></li>
+  </ol>
+  <div class="self-name">emulator_checker</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="-emulator-checker">📱 Emulator Checker</h1>
+<p>A <strong>Flutter plugin</strong> that detects whether an app is running on an <strong>emulator</strong> or a <strong>real device</strong>. This can be useful for <strong>security measures</strong>, <strong>analytics</strong>, and <strong>feature flagging</strong>, allowing developers to modify app behavior based on the runtime environment.</p>
+<h2 id="-installation">🛠 Installation</h2>
+<p>Add this to your <code>pubspec.yaml</code>:</p>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  emulator_checker: latest_version
+</code></pre>
+<p>Run:</p>
+<pre class="language-sh"><code class="language-sh">flutter pub get
+</code></pre>
+<h2 id="-usage">🚀 Usage</h2>
+<p>Import the package:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:emulator_checker/emulator_checker.dart';
+</code></pre>
+<h3 id="example-detect-if-running-on-an-emulator">Example: Detect if Running on an Emulator</h3>
+<pre class="language-dart"><code class="language-dart">void checkDevice() async {
+  bool isEmulator = await EmulatorChecker().isEmulator();
+  print(isEmulator ? "Running on an emulator" : "Running on a real device");
+}
+</code></pre>
+<h2 id="-features">📌 Features</h2>
+<p>✅ Detects if the app is running on an <strong>emulator</strong><br>
+✅ Supports <strong>Android</strong> and <strong>iOS</strong><br>
+✅ Lightweight and easy to use</p>
+<h2 id="-why-use-emulator-detection">💡 Why Use Emulator Detection?</h2>
+<ul>
+<li><strong>Security</strong>: Prevent unauthorized access by blocking emulators.</li>
+<li><strong>Analytics</strong>: Exclude emulator-based test data from analytics reports.</li>
+<li><strong>Feature Control</strong>: Restrict certain app features for real devices only.</li>
+</ul>
+<h2 id="-support-my-work">❤️ Support My Work</h2>
+<p>If you find this package useful, you can <strong><a href="https://buymeacoffee.com/rhylvin">buy me a coffee</a></strong> to support development!</p>
+<p><a href="https://buymeacoffee.com/rhylvin"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-orange?style=flat&amp;logo=buy-me-a-coffee" alt="Buy Me a Coffee"></a></p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="emulator_checker">
+  <span class="name"><a href="emulator_checker/emulator_checker-library.html">emulator_checker</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://github.com/rhylvin2022/emulator_checker">emulator_checker package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">emulator_checker</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="emulator_checker/emulator_checker-library.html">emulator_checker</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    emulator_checker
+      0.0.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,6 +1,6 @@
 name: emulator_checker
-description: A plugin to check if app is running at an Emulator or not.
-version: 0.0.1
+description: A Flutter plugin that detects whether an application is running on an emulator or a physical device. This can be useful for security purposes, analytics, and feature flagging, allowing developers to tailor app behavior based on the runtime environment. Supports Android and iOS platforms.
+version: 0.0.2
 homepage: https://github.com/rhylvin2022/emulator_checker
 # repository: https://github.com/rhylvin2022/emulator_checker
 
@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   get_radio_version_plugin: ^1.0.0
-  device_info_plus: ^4.0.0
+  device_info_plus: ^9.1.2
 
 dev_dependencies:
   lints: ^2.0.0

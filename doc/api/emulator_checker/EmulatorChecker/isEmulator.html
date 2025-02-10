@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the isEmulator method from the EmulatorChecker class, for the Dart programming language.">
+  <title>isEmulator method - EmulatorChecker class - emulator_checker library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">emulator_checker</a></li>
+    <li><a href="../../emulator_checker/emulator_checker-library.html">emulator_checker</a></li>
+    <li><a href="../../emulator_checker/EmulatorChecker-class.html">EmulatorChecker</a></li>
+    <li class="self-crumb">isEmulator method</li>
+  </ol>
+  <div class="self-name">isEmulator</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">isEmulator</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+<span class="name ">isEmulator</span>(<wbr>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;bool&gt; isEmulator() async {
+  final deviceInfoPlugin = DeviceInfoPlugin();
+
+  if (Platform.isAndroid) {
+    AndroidDeviceInfo androidInfo = await deviceInfoPlugin.androidInfo;
+    bool androidEmulator = false;
+
+    &#47;&#47;&#47; Checking for known android emulator properties
+    if ((androidInfo.fingerprint?.contains(&quot;generic&quot;) ?? false) ||
+        (androidInfo.model?.contains(&quot;Emulator&quot;) ?? false) ||
+        (androidInfo.manufacturer?.contains(&quot;Genymotion&quot;) ?? false) ||
+        (androidInfo.hardware?.contains(&quot;goldfish&quot;) ?? false) ||
+        (androidInfo.brand?.contains(&quot;generic&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;google_sdk&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;simulator&quot;) ?? false) ||
+        (androidInfo.fingerprint?.contains(&quot;unknown&quot;) ?? false) ||
+        (androidInfo.hardware?.contains(&quot;ranchu&quot;) ?? false) ||
+        (androidInfo.model?.contains(&quot;Android SDK built for x86&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;sdk_google&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;sdk&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;sdk_x86&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;sdk_gphone64_arm64&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;vbox86p&quot;) ?? false) ||
+        (androidInfo.product?.contains(&quot;emulator&quot;) ?? false)) {
+      androidEmulator = true;
+    }
+
+    &#47;&#47;&#47;check if actual Physical Device
+    if (!androidEmulator) {
+      androidEmulator = !(androidInfo.isPhysicalDevice ?? true);
+    }
+
+    &#47;&#47;&#47;check for radio version
+    &#47;&#47;&#47;Radio firmware version of the device as a String,
+    &#47;&#47;&#47;typically for devices that include cellular radios.
+    &#47;&#47;&#47;This is sometimes used to identify emulators because emulators
+    &#47;&#47;&#47;often return a basic or default radio version,
+    &#47;&#47;&#47;such as &quot;1.0.0.0&quot;, while physical devices have
+    &#47;&#47;&#47;unique or non-default values.
+    if (!androidEmulator) {
+      String radioVersion =
+          await GetRadioVersionPlugin.radioVersion ?? &#39;Unknown radio version&#39;;
+      if (radioVersion == &#39;1.0.0.0&#39; || radioVersion == &#39;&#39;) {
+        &#47;&#47;&#47;Emulator
+        androidEmulator = true;
+      }
+    }
+
+    return androidEmulator;
+  } else if (Platform.isIOS) {
+    IosDeviceInfo iosInfo = await deviceInfoPlugin.iosInfo;
+    return !(iosInfo.isPhysicalDevice);
+  }
+
+  return false;
+
+  &#47;&#47;&#47; It&#39;s a physical device
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">emulator_checker</a></li>
+  <li><a href="../../emulator_checker/emulator_checker-library.html">emulator_checker</a></li>
+  <li><a href="../../emulator_checker/EmulatorChecker-class.html">EmulatorChecker</a></li>
+  <li class="self-crumb">isEmulator method</li>
+</ol>
+
+
+    <h5>EmulatorChecker class</h5>
+    <ol>
+
+        <li class="section-title"><a href="../../emulator_checker/EmulatorChecker-class.html#constructors">Constructors</a></li>
+          <li><a href="../../emulator_checker/EmulatorChecker/EmulatorChecker.html">EmulatorChecker</a></li>
+
+
+        <li class="section-title inherited">
+          <a href="../../emulator_checker/EmulatorChecker-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="../../emulator_checker/EmulatorChecker-class.html#instance-methods">Methods</a></li>
+          <li><a href="../../emulator_checker/EmulatorChecker/isEmulator.html">isEmulator</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="../../emulator_checker/EmulatorChecker-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    emulator_checker
+      0.0.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
