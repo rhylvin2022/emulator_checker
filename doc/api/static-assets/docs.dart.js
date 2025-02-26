@@ -551,7 +551,7 @@ if(n instanceof RegExp)return n
 throw A.b(A.J("Illegal RegExp pattern ("+String(n)+")",a,null))},
 f5(a,b,c){var s=a.indexOf(b,c)
 return s>=0},
-nD(a){if(/[[\]{}()*+?.\\^$|]/.test(a))return a.replace(/[[\]{}()*+?.\\^$|]/g,"\\$&")
+nD(a){if(/[[\]{}()*+.\\^$|]/.test(a))return a.replace(/[[\]{}()*+.\\^$|]/g,"\\$&")
 return a},
 ko(a){return a},
 nG(a,b,c,d){var s,r,q,p=new A.he(b,a,0),o=t.F,n=0,m=""

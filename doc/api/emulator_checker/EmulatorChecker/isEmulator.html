@@ -77,22 +77,22 @@
     bool androidEmulator = false;
 
     &#47;&#47;&#47; Checking for known android emulator properties
-    if ((androidInfo.fingerprint?.contains(&quot;generic&quot;) ?? false) ||
-        (androidInfo.model?.contains(&quot;Emulator&quot;) ?? false) ||
-        (androidInfo.manufacturer?.contains(&quot;Genymotion&quot;) ?? false) ||
-        (androidInfo.hardware?.contains(&quot;goldfish&quot;) ?? false) ||
-        (androidInfo.brand?.contains(&quot;generic&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;google_sdk&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;simulator&quot;) ?? false) ||
-        (androidInfo.fingerprint?.contains(&quot;unknown&quot;) ?? false) ||
-        (androidInfo.hardware?.contains(&quot;ranchu&quot;) ?? false) ||
-        (androidInfo.model?.contains(&quot;Android SDK built for x86&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;sdk_google&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;sdk&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;sdk_x86&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;sdk_gphone64_arm64&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;vbox86p&quot;) ?? false) ||
-        (androidInfo.product?.contains(&quot;emulator&quot;) ?? false)) {
+    if ((androidInfo.fingerprint.contains(&quot;generic&quot;) ?? false) ||
+        (androidInfo.model.contains(&quot;Emulator&quot;) ?? false) ||
+        (androidInfo.manufacturer.contains(&quot;Genymotion&quot;) ?? false) ||
+        (androidInfo.hardware.contains(&quot;goldfish&quot;) ?? false) ||
+        (androidInfo.brand.contains(&quot;generic&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;google_sdk&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;simulator&quot;) ?? false) ||
+        (androidInfo.fingerprint.contains(&quot;unknown&quot;) ?? false) ||
+        (androidInfo.hardware.contains(&quot;ranchu&quot;) ?? false) ||
+        (androidInfo.model.contains(&quot;Android SDK built for x86&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;sdk_google&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;sdk&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;sdk_x86&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;sdk_gphone64_arm64&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;vbox86p&quot;) ?? false) ||
+        (androidInfo.product.contains(&quot;emulator&quot;) ?? false)) {
       androidEmulator = true;
     }
 
