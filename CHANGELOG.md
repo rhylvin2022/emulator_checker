@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0
+- 1.0.0 update to null safety
+
 ## 0.0.4
 - 0.0.4 updated readme to cater null safety.
 
