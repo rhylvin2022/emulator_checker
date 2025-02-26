@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.4
+- 0.0.4 updated readme to cater null safety.
+
 ## 0.0.3
 - 0.0.2 updated the device_info_plus to latest, reverted back to 4.0.0
 

@@ -16,6 +16,13 @@ Run:
 flutter pub get
 ```
 
+## 🚀 Features
+
+✅ **Null safety** support (starting from version 3.0.0)  
+✅ Detects if the app is running on an **emulator**  
+✅ Supports **Android** and **iOS**  
+✅ Lightweight and easy to use
+
 ## 🚀 Usage
 
 Import the package:
@@ -33,18 +40,19 @@ void checkDevice() async {
 }
 ```
 
-## 📌 Features
-✅ Detects if the app is running on an **emulator**  
-✅ Supports **Android** and **iOS**  
-✅ Lightweight and easy to use
-
 ## 💡 Why Use Emulator Detection?
 - **Security**: Prevent unauthorized access by blocking emulators.
 - **Analytics**: Exclude emulator-based test data from analytics reports.
 - **Feature Control**: Restrict certain app features for real devices only.
 
+## 🔄 Version Compatibility
+| Version | Dart SDK | Null Safety |
+|---------|---------|-------------|
+| 2.x.x   | ≥3.0.0  | ✅ Yes |
+| 1.x.x   | <3.0.0  | ❌ No |
+
 ## ❤️ Support My Work
 
 If you find this package useful, you can **[buy me a coffee](https://buymeacoffee.com/rhylvin)** to support development!
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-orange?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/rhylvin)  
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-orange?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/rhylvin)
