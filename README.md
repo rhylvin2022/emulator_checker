@@ -48,8 +48,8 @@ void checkDevice() async {
 ## 🔄 Version Compatibility
 | Version | Dart SDK | Null Safety |
 |---------|---------|-------------|
-| 2.x.x   | ≥3.0.0  | ✅ Yes |
-| 1.x.x   | <3.0.0  | ❌ No |
+| 1.x.x   | ≥3.0.0  | ✅ Yes |
+| 0.x.x   | <3.0.0  | ❌ No |
 
 ## ❤️ Support My Work
 
