@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/emulator_checker.iml" filepath="$PROJECT_DIR$/.idea/emulator_checker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/emulator_checker_android.iml" filepath="$PROJECT_DIR$/android/emulator_checker_android.iml" />
     </modules>
   </component>
 </project>
