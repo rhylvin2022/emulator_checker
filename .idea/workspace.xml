@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5361d2e7-3a9e-4d67-a6f3-c9d2079b2608" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/emulator_checker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/emulator_checker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/8b5dbfd7bd4d3c7e3b01a28bd8a3cb1d/_composite.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/8b5dbfd7bd4d3c7e3b01a28bd8a3cb1d/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/8b5dbfd7bd4d3c7e3b01a28bd8a3cb1d/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/last_build_run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/emulator_checker_example.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/emulator_checker_example.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/emulator_checker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/emulator_checker.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/emulator_checker_base.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/emulator_checker_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/emulator_checker_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +35,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ISUITE_WLT_WEB_MOBILE_CTBC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hdps_emulator_checker_sdk" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2712975" />
