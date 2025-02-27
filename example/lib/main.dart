@@ -15,7 +15,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _deviceStatus = 'Checking...';
-  final _emulatorCheckerPlugin = EmulatorChecker();
 
   @override
   void initState() {
