@@ -1,4 +1,7 @@
 # Changelog
+## 1.0.4
+- Remove get_radio_version_plugin - which was use before but we updated the code to use Native Android and iOS only.
+
 ## 1.0.3
 - Added `namespace` to `android` block in `build.gradle` for compatibility with the latest AGP (Android Gradle Plugin) version.
 ### Fixed:
