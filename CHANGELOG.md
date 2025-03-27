@@ -1,4 +1,8 @@
 # Changelog
+## 1.0.3
+- Added `namespace` to `android` block in `build.gradle` for compatibility with the latest AGP (Android Gradle Plugin) version.
+### Fixed:
+- Resolved issue causing `Namespace not specified` error during build process.
 
 ## 1.0.2
 - 1.0.2 add android platform specific code for radio version checker

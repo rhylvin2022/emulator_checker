@@ -42,5 +42,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+        namespace 'com.example.emulator_checker'
     }
 }
