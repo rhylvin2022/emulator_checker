@@ -7,13 +7,17 @@ let package = Package(
         .iOS(.v12),
     ],
     products: [
-        .library(name: "emulator_checker", targets: ["emulator_checker"])
+        .library(name: "emulator-checker", targets: ["emulator_checker"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(name: "FlutterFramework", path: "../FlutterFramework")
+    ],
     targets: [
         .target(
             name: "emulator_checker",
-            dependencies: [],
+            dependencies: [
+                .product(name: "FlutterFramework", package: "FlutterFramework")
+            ],
             path: "Sources/emulator_checker"
         )
     ]
