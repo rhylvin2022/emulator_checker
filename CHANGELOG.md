@@ -1,4 +1,8 @@
 # Changelog
+
+## 1.0.5
+- Added Swift Package Manager (SPM) support for iOS (Flutter 3.44+ compatibility)
+
 ## 1.0.4
 - Remove get_radio_version_plugin - which was use before but we updated the code to use Native Android and iOS only.
 

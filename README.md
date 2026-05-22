@@ -18,9 +18,10 @@ flutter pub get
 
 ## 🚀 Features
 
-✅ **Null safety** support (starting from version 3.0.0)  
+✅ **Null safety** support  
 ✅ Detects if the app is running on an **emulator**  
 ✅ Supports **Android** and **iOS**  
+✅ **Swift Package Manager (SPM)** support for iOS (Flutter 3.44+)  
 ✅ Lightweight and easy to use
 
 ## 🚀 Usage
